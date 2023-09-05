@@ -277,8 +277,8 @@ WheelCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2762295717202265143}
   serializedVersion: 2
-  m_Center: {x: 0, y: 0.15, z: 0}
-  m_Radius: 0.37
+  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.5
   m_SuspensionSpring:
     spring: 35000
     damper: 4500
@@ -563,6 +563,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc307e114a19a1e4c9e5a33d256c430e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wheelFL: {fileID: 0}
+  wheelFR: {fileID: 0}
+  wheelRL: {fileID: 0}
+  wheelRR: {fileID: 0}
+  maxTorque: 500
+  maxSteeringAngle: 50
+  maxSpeed: 150
+  currentSpeed: 0
+  isBreaking: 0
 --- !u!65 &8719616539916279707
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -596,10 +605,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cb586b2ed24e414cb8f74b41991068a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: {fileID: 0}
+  path1: {fileID: 0}
+  path2: {fileID: 0}
   wheelFL: {fileID: 2716459193614891142}
   wheelFR: {fileID: 4795950753765878369}
+  wheelRL: {fileID: 0}
+  wheelRR: {fileID: 0}
+  centerOfMass: {x: 0, y: 0, z: 0}
   maxSteerAngle: 45
+  turnSpeed: 5
+  maxMotorTorque: 1500
+  maxBrakeTorque: 50
+  currentSpeed: 0
+  maxSpeed: 100
+  isBraking: 0
+  sensorLength: 5
+  frontSensorPosition: {x: 0, y: 0.3, z: 1}
+  frontSideSenserPosition: 0.97
+  frontSensorAngle: 20.8
 --- !u!1 &3962000127133956386
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,8 +663,8 @@ WheelCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3962000127133956386}
   serializedVersion: 2
-  m_Center: {x: 0, y: 0.15, z: 0}
-  m_Radius: 0.37
+  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.5
   m_SuspensionSpring:
     spring: 35000
     damper: 4500
